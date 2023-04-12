@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:smart_shower_head/blconnect_page.dart';
-import 'package:smart_shower_head/flow_page.dart';
-import 'package:smart_shower_head/humid_page.dart';
-import 'package:smart_shower_head/temp_page.dart';
-import 'package:smart_shower_head/uvlight_page.dart';
-import 'package:smart_shower_head/wateruse_page.dart';
+import 'package:smart_shower_head/widgets/blconnect_page.dart';
+import 'package:smart_shower_head/widgets/flow_page.dart';
+import 'package:smart_shower_head/widgets/humid_page.dart';
+import 'package:smart_shower_head/widgets/temp_page.dart';
+import 'package:smart_shower_head/widgets/uvlight_page.dart';
+import 'package:smart_shower_head/widgets/wateruse_page.dart';
 import 'package:alan_voice/alan_voice.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 
