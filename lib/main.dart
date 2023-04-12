@@ -100,83 +100,155 @@ class HomeScreen extends StatelessWidget {
           mainAxisSpacing: 10,
           crossAxisCount: 2,
           children: <Widget>[
-            InkWell(
-              child: Container (
-                padding: const EdgeInsets.all(8),
-                color: const Color.fromARGB(255, 10, 131, 230),
-                child: const Text("Temperature Page"),
+            SizedBox.fromSize(
+              size: const Size(56, 56), // button width and height
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: Material(
+                  color: const Color.fromARGB(255, 10, 131, 230), // button color
+                  child: InkWell(
+                    splashColor: Colors.white, // splash color
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const TemperaturePage()),
+                      );
+                    }, // button pressed
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const <Widget>[
+                        Text("Temperature", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                        Icon(Icons.thermostat, size: 100), // icon // text
+                      ],
+                    ),
+                  ),
+                ),
               ),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const TemperaturePage()),
-                );
-              },
             ),
-            InkWell(
-              child: Container (
-                padding: const EdgeInsets.all(8),
-                color: const Color.fromARGB(255, 10, 131, 230),
-                child: const Text("Humidity Page"),
+            SizedBox.fromSize(
+              size: const Size(56, 56), // button width and height
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: Material(
+                  color: const Color.fromARGB(255, 10, 131, 230), // button color
+                  child: InkWell(
+                    splashColor: Colors.white, // splash color
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const WaterUsePage()),
+                      );
+                    }, // button pressed
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const <Widget>[
+                        Text("Water Usage", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                        Icon(Icons.water_drop, size: 100), // icon // text
+                      ],
+                    ),
+                  ),
+                ),
               ),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const HumidityPage()),
-                );
-              },
             ),
-            InkWell(
-              child: Container (
-                padding: const EdgeInsets.all(8),
-                color: const Color.fromARGB(255, 10, 131, 230),
-                child: const Text("Flow Meter Page"),
+            SizedBox.fromSize(
+              size: const Size(56, 56), // button width and height
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: Material(
+                  color: const Color.fromARGB(255, 10, 131, 230), // button color
+                  child: InkWell(
+                    splashColor: Colors.white, // splash color
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const FlowMeterPage()),
+                      );
+                    }, // button pressed
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const <Widget>[
+                        Text("Flow Rate", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                        Icon(Icons.shower, size: 100), // icon // text
+                      ],
+                    ),
+                  ),
+                ),
               ),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const FlowMeterPage()),
-                );
-              },
             ),
-            InkWell(
-              child: Container (
-                padding: const EdgeInsets.all(8),
-                color: const Color.fromARGB(255, 10, 131, 230),
-                child: const Text("Water Usage Page"),
+            SizedBox.fromSize(
+              size: const Size(56, 56), // button width and height
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: Material(
+                  color: const Color.fromARGB(255, 10, 131, 230), // button color
+                  child: InkWell(
+                    splashColor: Colors.white, // splash color
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const UVLightPage()),
+                      );
+                    }, // button pressed
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const <Widget>[
+                        Text("UV Light", style: TextStyle(fontSize: 16)),
+                        Icon(Icons.fluorescent, size: 100), // icon // text
+                      ],
+                    ),
+                  ),
+                ),
               ),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const WaterUsePage()),
-                );
-              },
             ),
-            InkWell(
-              child: Container (
-                padding: const EdgeInsets.all(8),
-                color: const Color.fromARGB(255, 10, 131, 230),
-                child: const Text("UV light Page"),
+            SizedBox.fromSize(
+              size: const Size(56, 56), // button width and height
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: Material(
+                  color: const Color.fromARGB(255, 10, 131, 230), // button color
+                  child: InkWell(
+                    splashColor: Colors.white, // splash color
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const HumidityPage()),
+                      );
+                    }, // button pressed
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const <Widget>[
+                        Text("Humidity", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                        Icon(Icons.water, size: 100), // icon // text
+                      ],
+                    ),
+                  ),
+                ),
               ),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const UVLightPage()),
-                );
-              },
             ),
-            InkWell(
-              child: Container (
-                padding: const EdgeInsets.all(8),
-                color: const Color.fromARGB(255, 10, 131, 230),
-                child: const Text("Bluetooth Connect Page"),
+            SizedBox.fromSize(
+              size: const Size(56, 56), // button width and height
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: Material(
+                  color: const Color.fromARGB(255, 10, 131, 230), // button color
+                  child: InkWell(
+                    splashColor: Colors.white, // splash color
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const BluetoothConnectPage()),
+                      );
+                    }, // button pressed
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const <Widget>[
+                        Text("Connect to Device", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                        Icon(Icons.bluetooth, size: 100), // icon // text
+                      ],
+                    ),
+                  ),
+                ),
               ),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const BluetoothConnectPage()),
-                );
-              },
             ),
           ],
         ),
