@@ -4,6 +4,7 @@ import 'package:smart_shower_head/widgets/flow_page.dart';
 import 'package:smart_shower_head/widgets/humid_page.dart';
 import 'package:smart_shower_head/widgets/temp_page.dart';
 import 'package:smart_shower_head/widgets/wateruse_page.dart';
+import 'package:smart_shower_head/widgets/settings_page.dart';
 import 'package:alan_voice/alan_voice.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 
@@ -81,7 +82,7 @@ class _SmartShowerHeadPageState extends State<SmartShowerHeadPage> {
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
-
+  //final int value = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -231,6 +232,35 @@ class HomeScreen extends StatelessWidget {
         onPressed: _callNumber,
         tooltip: 'Emergency Call',
         child: Icon(Icons.call),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            label: 'Business',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Settings',
+          ),
+        ],
+        onTap: (value) {
+          if(value == 1) {
+              Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const FlowMeterPage()),
+              );
+          } else if (value == 2) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const SettingsPage()),
+              );
+          }
+        }
       ),
     );
   }
