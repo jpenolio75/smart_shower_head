@@ -3,7 +3,6 @@ import 'package:smart_shower_head/widgets/blconnect_page.dart';
 import 'package:smart_shower_head/widgets/flow_page.dart';
 import 'package:smart_shower_head/widgets/humid_page.dart';
 import 'package:smart_shower_head/widgets/temp_page.dart';
-import 'package:smart_shower_head/widgets/uvlight_page.dart';
 import 'package:smart_shower_head/widgets/wateruse_page.dart';
 import 'package:alan_voice/alan_voice.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
@@ -169,31 +168,6 @@ class HomeScreen extends StatelessWidget {
                       children: const <Widget>[
                         Text("Flow Rate", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
                         Icon(Icons.shower, size: 100), // icon // text
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            SizedBox.fromSize(
-              size: const Size(56, 56), // button width and height
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(15),
-                child: Material(
-                  color: const Color.fromARGB(255, 10, 131, 230), // button color
-                  child: InkWell(
-                    splashColor: Colors.white, // splash color
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const UVLightPage()),
-                      );
-                    }, // button pressed
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const <Widget>[
-                        Text("UV Light", style: TextStyle(fontSize: 16)),
-                        Icon(Icons.fluorescent, size: 100), // icon // text
                       ],
                     ),
                   ),
