@@ -5,6 +5,7 @@ import 'package:smart_shower_head/widgets/humid_page.dart';
 import 'package:smart_shower_head/widgets/temp_page.dart';
 import 'package:smart_shower_head/widgets/wateruse_page.dart';
 import 'package:smart_shower_head/widgets/settings_page.dart';
+import 'package:smart_shower_head/widgets/streamplat_page.dart';
 import 'package:alan_voice/alan_voice.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 
@@ -200,31 +201,6 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox.fromSize(
-              size: const Size(56, 56), // button width and height
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(15),
-                child: Material(
-                  color: const Color.fromARGB(255, 10, 131, 230), // button color
-                  child: InkWell(
-                    splashColor: Colors.white, // splash color
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const BluetoothConnectPage()),
-                      );
-                    }, // button pressed
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const <Widget>[
-                        Text("Connect to Device", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-                        Icon(Icons.bluetooth, size: 100), // icon // text
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
           ],
         ),
       ),
@@ -234,14 +210,21 @@ class HomeScreen extends StatelessWidget {
         child: Icon(Icons.call),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.blue,
+        selectedItemColor: Colors.white,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: Icon(Icons.play_circle_outline),
+            label: 'Music',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.bluetooth),
+            label: 'Devices',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
@@ -252,9 +235,14 @@ class HomeScreen extends StatelessWidget {
           if(value == 1) {
               Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const FlowMeterPage()),
+              MaterialPageRoute(builder: (context) => const StreamingPlatformPage()),
               );
           } else if (value == 2) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const BluetoothConnectPage()),
+              );
+          } else if (value == 3) {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => const SettingsPage()),
