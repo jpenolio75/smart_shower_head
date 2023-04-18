@@ -83,7 +83,6 @@ class _SmartShowerHeadPageState extends State<SmartShowerHeadPage> {
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
-  //final int value = 0;
 
   @override
   Widget build(BuildContext context) {
