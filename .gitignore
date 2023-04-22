@@ -31,12 +31,12 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
-/.vscode/
-/ios/
-/linux/
-/macos/
-/web/
-/windows/
+.vscode/
+ios/
+linux/
+macos/
+web/
+windows/
 
 # Symbolication related
 app.*.symbols
