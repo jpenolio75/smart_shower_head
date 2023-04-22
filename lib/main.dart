@@ -8,8 +8,10 @@ import 'package:smart_shower_head/widgets/settings_page.dart';
 import 'package:smart_shower_head/widgets/streamplat_page.dart';
 import 'package:alan_voice/alan_voice.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+Future main() async {
+  await dotenv.load(fileName: "lib/.env");
   runApp(const SmartShowerHead());
 }
 
@@ -49,7 +51,7 @@ class SmartShowerHeadPage extends StatefulWidget {
 class _SmartShowerHeadPageState extends State<SmartShowerHeadPage> {
   _SmartShowerHeadPageState() {
     /// Init Alan Button with project key from Alan Studio      
-    AlanVoice.addButton("67b683a94fac7b8b8f9d910996c042832e956eca572e1d8b807a3e2338fdd0dc/stage", 
+    AlanVoice.addButton(dotenv.env['ALAN_API_KEY']!, 
     buttonAlign: AlanVoice.BUTTON_ALIGN_LEFT);
 
     /// Handle commands from Alan Studio
