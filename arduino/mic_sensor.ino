@@ -1,3 +1,4 @@
+
 #include <driver/i2s.h>
 
 // you shouldn't need to change these settings
@@ -53,4 +54,3 @@ void loop()
     Serial.printf("%ld\n", raw_samples[i]);
   }
 }
-
