@@ -1,15 +1,24 @@
-# smart_shower_head
+# Smart Shower Head
 
 A new Flutter project.
 
-## Getting Started
+## Components
+Software:
 
-This project is a starting point for a Flutter application.
+- [Flutter Framework](https://flutter.dev/?gclid=Cj0KCQjw6cKiBhD5ARIsAKXUdybxUaiIYUC5NsHNd3jG1sI6aeb_NEmy3xlNIq1k0pfEP0OSRGfOUV8aAvDQEALw_wcB&gclsrc=aw.ds)
+- [Arduino IDE](https://www.arduino.cc/en/software)
+- [Spotify Android SDK](https://developer.spotify.com/documentation/android)
+- [Alan AI Flutter Plugin](https://alan.app/docs/client-api/cross-platform/flutter/)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Hardware:
+- ESP32
+- Temp Sensor
+- Flow Rate Sensor
+- OLED
+- Microphone
+- Speaker
+- Square Shower Head
 
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
