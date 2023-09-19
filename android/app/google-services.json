@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1007202939310",
+    "firebase_url": "https://smart-shower-head-bfcc9-default-rtdb.firebaseio.com",
+    "project_id": "smart-shower-head-bfcc9",
+    "storage_bucket": "smart-shower-head-bfcc9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007202939310:android:06f3e9faac632b135c183f",
+        "android_client_info": {
+          "package_name": "com.example.smart_shower_head"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1007202939310-c4pug9ufrvss7s144k3sg5ji9cq7o97m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArw6pCYLCGLghpdhfh4hnoMY6b7i-jzis"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1007202939310-c4pug9ufrvss7s144k3sg5ji9cq7o97m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1007202939310-9u0dclk6tf91320k7eirq38ugeiuo832.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.smartShowerHead"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
