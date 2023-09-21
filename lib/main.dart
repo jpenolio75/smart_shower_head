@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:smart_shower_head/widgets/settings_page.dart';
-import 'package:smart_shower_head/widgets/streamplat_page.dart';
 import 'package:smart_shower_head/widgets/homescreen_page.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
@@ -66,7 +65,6 @@ class BottomNavBar extends StatelessWidget {
     List<Widget> buildScreens() {
       return [
         const HomeScreenPage(),
-        const StreamingPlatformPage(),
         const SettingsPage(),
       ];
     }
@@ -79,12 +77,7 @@ class BottomNavBar extends StatelessWidget {
           title: ("Home"),
           activeColorPrimary: Colors.black,
           inactiveColorPrimary: Colors.white,
-        ), PersistentBottomNavBarItem(
-          icon: const Icon(Icons.play_circle_outline),
-          title: ("Music"),
-          activeColorPrimary: Colors.black,
-          inactiveColorPrimary: Colors.white,
-        ),
+        ), 
 
         PersistentBottomNavBarItem(
           icon: const Icon(Icons.settings),
