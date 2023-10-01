@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
-import 'package:smart_shower_head/page/graph_page.dart';
+import 'package:smart_shower_head/page/GraphPage.dart';
 
 class WaterUsePage extends StatefulWidget {
   const WaterUsePage({Key? key}) : super(key: key);
@@ -15,7 +15,7 @@ class _WaterPageState extends State<WaterUsePage> {
     switch (item) {
       case 0:
         Navigator.of(context).push(
-          MaterialPageRoute(builder: (context) => const GraphPage()),
+          MaterialPageRoute(builder: (context) => GraphPage()),
         );
         break;
     }
@@ -30,8 +30,11 @@ class _WaterPageState extends State<WaterUsePage> {
             PopupMenuButton<int>(
                 onSelected: (item) => onSelected(context, item),
                 itemBuilder: (context) => const [
-                      PopupMenuItem<int>(value: 0, child: Text('Chart')),
-                    ])
+                      PopupMenuItem<int>(
+                        value: 0,
+                        child: Text('Chart'),
+                      ),
+                    ]),
           ],
         ),
         body: Center(
