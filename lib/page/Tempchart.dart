@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-import 'dart:async';
-//import 'dart:math';
 import 'package:firebase_database/firebase_database.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/scheduler.dart';
+import 'package:firebase_database/ui/firebase_animated_list.dart';
+import 'dart:math' as math;
+import 'dart:async';
+import 'package:intl/intl.dart';
+//import 'package:intl/intl.dart';
+//import 'package:cloud_firestore/cloud_firestore.dart';
+//import 'package:firebase_core/firebase_core.dart';
+//import 'package:flutter/scheduler.dart';
 
+double temp2 = 0;
+
+/*
 class chart extends StatelessWidget {
   const chart({Key? key}) : super(key: key);
 
@@ -76,14 +82,39 @@ class _ChartData {
   _ChartData({this.x, this.y});
   final DateTime? x;
   final double? y; //temp
-}
+}*/
 
-/*class Tempchart extends StatefulWidget {
+/*class tempfirebase extends StatefulWidget {
   @override
-  _Tempchartstate createState() => _Tempchartstate();
+  _tempfirebase createState() => _tempfirebase();
 }
 
+class _tempfirebase extends State<tempfirebase> {
+  final databaseReference = FirebaseDatabase.instance.ref();
 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
+            child: FirebaseAnimatedList(
+      query: databaseReference,
+      itemBuilder: (BuildContext context, DataSnapshot snapshot,
+          Animation<double> animation, int index) {
+        Object? tempdata = snapshot.child('Temperature/AppData').value;
+        double temp = double.parse(tempdata.toString());
+
+        return ListView(
+          temp2 = temp;
+        )
+      },
+    )));
+  }
+}*/
+
+class Tempchart extends StatefulWidget {
+  @override
+  _Tempchart createState() => _Tempchart();
+}
 
 class _Tempchart extends State<Tempchart> {
   late List<TempData> chartdata;
@@ -133,15 +164,20 @@ class _Tempchart extends State<Tempchart> {
         addedDataIndex: chartdata.length - 1, removedDataIndex: 0);
   }
 
+  void tempdatafire(DataSnapshot snapshot) {
+    Object? tempdata = snapshot.child('Temperature/AppData').value;
+    temp2 = double.parse(tempdata.toString());
+  }
+
   List<TempData> getChartData() {
     return <TempData>[
-      TempData(0, 85),
-      TempData(1, 85.1),
-      TempData(2, 85.4),
-      TempData(3, 85.9),
-      TempData(4, 86),
-      TempData(5, 86.5),
-      TempData(6, 10),
+      TempData(0, temp2),
+      TempData(1, temp2),
+      TempData(2, temp2),
+      TempData(3, temp2),
+      TempData(4, temp2),
+      TempData(5, temp2),
+      TempData(6, temp2),
     ];
   }
 }
@@ -150,4 +186,4 @@ class TempData {
   TempData(this.time, this.temp);
   final int time;
   final double temp;
-}*/
+}
