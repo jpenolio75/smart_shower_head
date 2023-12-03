@@ -20,4 +20,4 @@ Smart objects are just about everywhere, improving our daily lives. However, the
 - [HiLetGo ILI9341 2.8" LCD](https://www.amazon.com/HiLetgo-240X320-Resolution-Display-ILI9341/dp/B073R7BH1B?pd_rd_w=O4H8I&content-id=amzn1.sym.724fac2e-0491-4f7a-a10d-2221f9a8bc9a&pf_rd_p=724fac2e-0491-4f7a-a10d-2221f9a8bc9a&pf_rd_r=6J7385DMHCVEMJ9DMN0Q&pd_rd_wg=Gd7xn&pd_rd_r=135c7ec4-9d70-414a-8e03-c4477e9bb9e8&pd_rd_i=B073R7BH1B&psc=1&ref_=pd_bap_d_grid_rp_0_1_i)
 - [Bolsen Water Flow Sensor YF-S201](https://www.amazon.com/Bolsen-Sensor-flowmeter-Control-YF-S201/dp/B07HQ8RGTY/ref=sr_1_6?crid=1B3NWTMQC71I2&keywords=flow+sensor&qid=1675963405&sprefix=flow+sensor%2Caps%2C159&sr=8-6)
 - [Gikfun Temperature Sensor DS18B20](https://www.amazon.com/Gikfun-DS18B20-Waterproof-Digital-Temperature/dp/B08V93CTM2/ref=sr_1_10?keywords=water+temperature+sensor&qid=1676932552&sprefix=water+temperture+sensor%2Caps%2C132&sr=8-10)
-- [Sparkfun Thin Speaker - 4 Ohm, 2.5W](https://www.sparkfun.com/products/21311)
+- [Dweii Microspeaker with JST-PH2.0 Interface- 8 Ohm, 3W](https://www.amazon.com/Loundspeaker-JST-PH2-0-Interface-Electronic-Advertising/dp/B0B4D1BN4F?th=1)
